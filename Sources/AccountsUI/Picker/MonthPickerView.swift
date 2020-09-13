@@ -1,0 +1,88 @@
+//
+//  MonthPickerView.swift
+//
+//
+//  Created by Bastián Véliz Vega on 13-09-20.
+//
+
+import Combine
+import Foundation
+import SwiftUI
+
+/// Picker with a list of months
+public struct MonthPickerView: View {
+    let title: String
+    let locale: Locale
+    @Binding private var selection: Int
+
+    var elements: [PickerElement<String>] {
+        var array = [PickerElement<String>]()
+        for i in 0 ..< self.months.count {
+            array.append(PickerElement<String>(id: i, element: self.months[i]))
+        }
+
+        return array
+    }
+
+    var months: [String] {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.locale = self.locale
+
+        guard let months = dateFormatter.monthSymbols else {
+            fatalError("Couldn't get months")
+        }
+
+        return months
+    }
+
+    /// Default initializer
+    /// - Parameters:
+    ///   - title: View title
+    ///   - selection: Binding to picker selected index
+    ///   - locale: Locale used to get month symbols from date formater. Default Value: es_CL
+    public init(title: String,
+                selection: Binding<Int>,
+                locale: Locale = Locale(identifier: "es_CL")) {
+        self.title = title
+        self.locale = locale
+        self._selection = selection
+    }
+
+    /**
+     View body
+
+     View with a label and a picker with months
+
+      - Note:
+      This view uses an instance of `LabelPickerView` internally
+
+     */
+    public var body: some View {
+        LabelPickerView(title: self.title,
+                        elements: self.elements,
+                        selection: self.$selection)
+    }
+}
+
+struct MonthPickerView_Previews: PreviewProvider {
+    @ObservedObject static var viewModel = TestViewModel()
+
+    static var previews: some View {
+        Group {
+            MonthPickerView(title: "Meses", selection: self.$viewModel.selection)
+            MonthPickerView(title: "Meses", selection: self.$viewModel.selection, locale: Locale(identifier: "en_US"))
+        }
+        
+    }
+
+    class TestViewModel: ObservableObject, Identifiable {
+        let id = UUID()
+        let objectWillChange = PassthroughSubject<TestViewModel, Never>()
+
+        var selection: Int = 0 {
+            didSet {
+                self.objectWillChange.send(self)
+            }
+        }
+    }
+}
