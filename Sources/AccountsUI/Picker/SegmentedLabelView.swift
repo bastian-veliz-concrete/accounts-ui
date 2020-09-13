@@ -9,6 +9,7 @@ import Combine
 import Foundation
 import SwiftUI
 
+/// View composed by a Text and a Picker with the SegmentedPickerStyle
 @available(watchOS,
            unavailable,
            message: "SegmentedLabelView is not available in watchOS")
