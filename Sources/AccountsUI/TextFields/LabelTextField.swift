@@ -9,7 +9,7 @@ import Combine
 import Foundation
 import SwiftUI
 
-/// View composed by a label and a textfield in a VStack
+/// View composed by a Text and a TextField in a VStack
 public struct LabelTextField: View {
     @Binding private var value: String
     let title: String
