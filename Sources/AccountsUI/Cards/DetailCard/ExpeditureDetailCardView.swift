@@ -28,11 +28,12 @@ public struct ExpeditureDetailCardView: View {
     let model: ExpeditureDetailCardModel
 
     /// Default initializer
-    /// - Parameter model: model with payment information
+    /// - Parameter model: model with expediture information
     public init(model: ExpeditureDetailCardModel) {
         self.model = model
     }
 
+    /// View's body
     public var body: some View {
         self.layout
             .padding()
