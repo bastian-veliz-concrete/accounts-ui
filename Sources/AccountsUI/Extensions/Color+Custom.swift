@@ -23,20 +23,14 @@ public extension Color {
      - Important:
         This variable returns:
         - `Color(UIColor.systemBackground)` in iOS
-        - `Color.accentColor` in watchOS
-        - `Color.secondary` in tvOS
-        - `Color(NSColor.windowBackgroundColor)` in macOS
+        - `return Color("background")` in another case
 
      */
     static let backgroundColor: Color = {
         #if os(iOS)
             return Color(UIColor.systemBackground)
-        #elseif os(watchOS)
-            return .accentColor
-        #elseif os(tvOS)
-            return .secondary
         #else
-            return Color(NSColor.windowBackgroundColor)
+            return Color("background", bundle: Bundle.module)
         #endif
     }()
 
@@ -48,27 +42,156 @@ public extension Color {
      - Important:
         This variable returns:
         - `Color(UIColor.systemIndigo)` in iOS and tvOS
-        - `Color(red: 94 / 255, green: 92 / 255, blue: 230 / 255)` in watchOS
+        - `Color("indigo")` in watchOS
         - `Color(Color(NSColor.systemIndigo)` in macOS
 
      */
     static let indigo: Color = {
         #if os(iOS) || os(tvOS)
             return Color(UIColor.systemIndigo)
-        #elseif os(watchOS)
-            return Color(red: 94 / 255, green: 92 / 255, blue: 230 / 255)
+        #elseif os(tvOS) || os(watchOS)
+            return Color("indigo", bundle: Bundle.module)
         #else
             return Color(NSColor.systemIndigo)
         #endif
     }()
 
-    static let systemGray6: Color = {
+    /**
+     Indigo color
+
+     Indigo color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemTeal)` in iOS and tvOS
+        - `Color("teal")` in watchOS
+        - `Color(Color(NSColor.systemTeal)` in macOS
+
+     */
+    static let teal: Color = {
         #if os(iOS) || os(tvOS)
-            return Color(UIColor.systemGray6)
+            return Color(UIColor.systemTeal)
         #elseif os(watchOS)
-            return Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255)
+            return Color("teal", bundle: Bundle.module)
         #else
-            return Color(NSColor.systemGray6)
+            return Color(NSColor.systemTeal)
+        #endif
+    }()
+
+    /**
+     System gray color
+
+     System gray color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray)` in iOS and tvOS
+        - `Color("gray")` in watchOS
+        - `Color(Color(NSColor.systemGray)` in macOS
+
+     */
+    static let systemGray: Color = {
+        #if os(iOS) || os(tvOS)
+            return Color(UIColor.systemGray)
+        #elseif os(watchOS)
+            return Color("gray", bundle: Bundle.module)
+        #else
+            return Color(NSColor.systemGray)
+        #endif
+    }()
+
+    /**
+     System gray 2 color
+
+     System gray 2 color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray2)` in iOS
+        - `Color("gray2")` in another case
+
+     */
+    static let systemGray2: Color = {
+        #if os(iOS)
+            return Color(UIColor.systemGray2)
+        #else
+            return Color("gray2", bundle: Bundle.module)
+        #endif
+    }()
+
+    /**
+     System gray 3 color
+
+     System gray 3 color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray3)` in iOS
+        - `Color("gray3")` in another case
+
+     */
+    static let systemGray3: Color = {
+        #if os(iOS)
+            return Color(UIColor.systemGray3)
+        #else
+            return Color("gray3", bundle: Bundle.module)
+        #endif
+    }()
+
+    /**
+     System gray 4 color
+
+     System gray 4 color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray4)` in iOS
+        - `Color("gray4")` in another case
+
+     */
+    static let systemGray4: Color = {
+        #if os(iOS)
+            return Color(UIColor.systemGray4)
+        #else
+            return Color("gray4", bundle: Bundle.module)
+        #endif
+    }()
+
+    /**
+     System gray 5 color
+
+     System gray 5 color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray5)` in iOS
+        - `Color("gray5")` in another case
+
+     */
+    static let systemGray5: Color = {
+        #if os(iOS)
+            return Color(UIColor.systemGray5)
+        #else
+            return Color("gray5", bundle: Bundle.module)
+        #endif
+    }()
+
+    /**
+     System gray 6 color
+
+     System gray 6 color for each OS
+
+     - Important:
+        This variable returns:
+        - `Color(UIColor.systemGray6)` in iOS
+        - `Color("gray6")` in another case
+
+     */
+    static let systemGray6: Color = {
+        #if os(iOS)
+            return Color(UIColor.systemGray6)
+        #else
+            return Color("gray6", bundle: Bundle.module)
         #endif
     }()
 }
