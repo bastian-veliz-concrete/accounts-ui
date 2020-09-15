@@ -32,7 +32,7 @@ public struct ExpeditureDetailCardModel: Identifiable {
 
     /// Default initializer
     /// - Parameters:
-    ///   - systemImageName: system image name (using SF Icons)
+    ///   - systemImageName: system image name (using SF symbols)
     ///   - imageTintColor: image tint color
     ///   - title: expediture title
     ///   - description: expediture description

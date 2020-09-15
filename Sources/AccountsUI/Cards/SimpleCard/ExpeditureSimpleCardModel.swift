@@ -28,7 +28,7 @@ public struct ExpeditureSimpleCardModel: Identifiable {
     /// - Parameters:
     ///   - name: expediture name
     ///   - amount: expediture amount
-    ///   - systemImageName: system image name (using SF Icons)
+    ///   - systemImageName: system image name (using SF symbols)
     ///   - imageTintColor: image tint color
     public init(name: String,
                 amount: String,
