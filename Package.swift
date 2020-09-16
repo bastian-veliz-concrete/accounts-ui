@@ -6,10 +6,7 @@ import PackageDescription
 private var targets: [Target] = [
     .target(
         name: "AccountsUI",
-        dependencies: [],
-        resources: [
-            .process("Color.xcassets")
-        ]
+        dependencies: []
     ),
 ]
 

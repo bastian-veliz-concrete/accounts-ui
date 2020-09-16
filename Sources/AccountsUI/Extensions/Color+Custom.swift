@@ -29,8 +29,14 @@ public extension Color {
     static let backgroundColor: Color = {
         #if os(iOS)
             return Color(UIColor.systemBackground)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .white, dark: .black)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.black)
         #else
-            return Color("background", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .white, dark: .black)
+            return Color(color)
         #endif
     }()
 
@@ -38,19 +44,12 @@ public extension Color {
      Indigo color
 
      Indigo color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemIndigo)` in iOS and tvOS
-        - `Color("indigo")` in watchOS
-        - `Color(Color(NSColor.systemIndigo)` in macOS
-
      */
     static let indigo: Color = {
         #if os(iOS) || os(tvOS)
             return Color(UIColor.systemIndigo)
-        #elseif os(tvOS) || os(watchOS)
-            return Color("indigo", bundle: Bundle.module)
+        #elseif os(watchOS)
+            return Color(UIColor.tintsSystemIndigoDark)
         #else
             return Color(NSColor.systemIndigo)
         #endif
@@ -60,19 +59,12 @@ public extension Color {
      Indigo color
 
      Indigo color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemTeal)` in iOS and tvOS
-        - `Color("teal")` in watchOS
-        - `Color(Color(NSColor.systemTeal)` in macOS
-
      */
     static let teal: Color = {
         #if os(iOS) || os(tvOS)
             return Color(UIColor.systemTeal)
         #elseif os(watchOS)
-            return Color("teal", bundle: Bundle.module)
+            return Color(UIColor.tintsSystemTealDark)
         #else
             return Color(NSColor.systemTeal)
         #endif
@@ -83,18 +75,12 @@ public extension Color {
 
      System gray color for each OS
 
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray)` in iOS and tvOS
-        - `Color("gray")` in watchOS
-        - `Color(Color(NSColor.systemGray)` in macOS
-
      */
     static let systemGray: Color = {
         #if os(iOS) || os(tvOS)
             return Color(UIColor.systemGray)
         #elseif os(watchOS)
-            return Color("gray", bundle: Bundle.module)
+            return Color(UIColor.gray)
         #else
             return Color(NSColor.systemGray)
         #endif
@@ -104,18 +90,18 @@ public extension Color {
      System gray 2 color
 
      System gray 2 color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray2)` in iOS
-        - `Color("gray2")` in another case
-
      */
     static let systemGray2: Color = {
         #if os(iOS)
             return Color(UIColor.systemGray2)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .greySystemGrey2Light, dark: .greySystemGrey2Dark)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.greySystemGrey2Dark)
         #else
-            return Color("gray2", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .greySystemGrey2Light, dark: .greySystemGrey2Dark)
+            return Color(color)
         #endif
     }()
 
@@ -123,18 +109,18 @@ public extension Color {
      System gray 3 color
 
      System gray 3 color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray3)` in iOS
-        - `Color("gray3")` in another case
-
      */
     static let systemGray3: Color = {
         #if os(iOS)
             return Color(UIColor.systemGray3)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .greySystemGrey3Light, dark: .greySystemGrey3Dark)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.greySystemGrey3Dark)
         #else
-            return Color("gray3", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .greySystemGrey3Light, dark: .greySystemGrey3Dark)
+            return Color(color)
         #endif
     }()
 
@@ -142,18 +128,18 @@ public extension Color {
      System gray 4 color
 
      System gray 4 color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray4)` in iOS
-        - `Color("gray4")` in another case
-
      */
     static let systemGray4: Color = {
         #if os(iOS)
             return Color(UIColor.systemGray4)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .greySystemGrey4Light, dark: .greySystemGrey4Dark)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.greySystemGrey4Dark)
         #else
-            return Color("gray4", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .greySystemGrey4Light, dark: .greySystemGrey4Dark)
+            return Color(color)
         #endif
     }()
 
@@ -161,18 +147,18 @@ public extension Color {
      System gray 5 color
 
      System gray 5 color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray5)` in iOS
-        - `Color("gray5")` in another case
-
      */
     static let systemGray5: Color = {
         #if os(iOS)
             return Color(UIColor.systemGray5)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .greySystemGrey5Light, dark: .greySystemGrey5Dark)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.greySystemGrey5Dark)
         #else
-            return Color("gray5", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .greySystemGrey5Light, dark: .greySystemGrey5Dark)
+            return Color(color)
         #endif
     }()
 
@@ -180,18 +166,18 @@ public extension Color {
      System gray 6 color
 
      System gray 6 color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemGray6)` in iOS
-        - `Color("gray6")` in another case
-
      */
     static let systemGray6: Color = {
         #if os(iOS)
             return Color(UIColor.systemGray6)
+        #elseif os(tvOS)
+            let color = UIColor.dynamicColor(light: .greySystemGrey6Light, dark: .greySystemGrey6Dark)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.greySystemGrey6Dark)
         #else
-            return Color("gray6", bundle: Bundle.module)
+            let color = NSColor.dynamicColor(light: .greySystemGrey6Light, dark: .greySystemGrey6Dark)
+            return Color(color)
         #endif
     }()
 }
