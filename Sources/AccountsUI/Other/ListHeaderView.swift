@@ -22,8 +22,7 @@ public struct ListHeaderView: View {
     ///   - title: header title
     public init(systemImageName: String,
                 imageColor: Color,
-                title: String)
-    {
+                title: String) {
         self.systemImageName = systemImageName
         self.imageColor = imageColor
         self.title = title
@@ -50,14 +49,7 @@ public struct ListHeaderView: View {
     }
 
     private var image: some View {
-        if #available(macOS 11, iOS 13, tvOS 13, watchOS 6, *) {
-            return Image(systemName: self.systemImageName)
-                .resizable()
-                .eraseToAnyView()
-        } else {
-            return Rectangle()
-                .eraseToAnyView()
-        }
+        return Image.resizableImage(systemName: self.systemImageName)
     }
 
     private var imageSize: CGFloat {

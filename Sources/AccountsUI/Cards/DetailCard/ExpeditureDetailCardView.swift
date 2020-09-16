@@ -89,12 +89,7 @@ public struct ExpeditureDetailCardView: View {
     // MARK: - Components
 
     private var image: some View {
-        if #available(macOS 11, iOS 13, tvOS 13, watchOS 6, *) {
-            return Image(systemName: self.model.systemImageName)
-                .resizable().eraseToAnyView()
-        } else {
-            return Rectangle().eraseToAnyView()
-        }
+        return Image.resizableImage(systemName: self.model.systemImageName)
     }
 
     private var logo: some View {
