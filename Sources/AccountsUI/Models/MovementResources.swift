@@ -8,7 +8,7 @@
 import Foundation
 
 /// Stores category and stores
-public struct MovementResources: Codable {
+public struct MovementResources: Decodable {
     /// Categories array
     public let categories: [CategoryStoreModel]
 
