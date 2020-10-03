@@ -10,12 +10,16 @@ import Foundation
 import SwiftUI
 
 /// View with a label and a picker compatible with iOS / iPadOs, tvOS, macOS and watchOS
-public struct LabelPickerView: View {
-    @Binding var selection: Int
+public struct LabelPickerView<IdType: Hashable>: View {
+    @Binding var selection: IdType
     @State var showPicker: Bool = true
 
     let title: String
-    let elements: [PickerElement<String>]
+    let elements: [PickerElement<IdType, String>]
+
+    private var selectedElementName: String {
+        return self.elements.first(where: { $0.id == self.selection })?.element ?? ""
+    }
 
     /// Default initializer
     /// - Parameters:
@@ -23,8 +27,8 @@ public struct LabelPickerView: View {
     ///   - elements: elements to be used in the Picker
     ///   - selection: Binding to picker selected index
     public init(title: String,
-                elements: [PickerElement<String>],
-                selection: Binding<Int>) {
+                elements: [PickerElement<IdType, String>],
+                selection: Binding<IdType>) {
         self.title = title
         self.elements = elements
         self._selection = selection
@@ -54,7 +58,7 @@ public struct LabelPickerView: View {
             HStack {
                 Text(self.title)
                     .bold()
-                    .mobilePickerLabel(self.elements[self.selection].element)
+                    .mobilePickerLabel(self.selectedElementName)
             }
             .mobileTapGesture(self.$showPicker)
             if self.showPicker {
@@ -129,10 +133,10 @@ struct LabelPickerView_Previews: PreviewProvider {
 
     @ObservedObject static var viewModel = TestViewModel()
 
-    static let elements: [PickerElement<String>] = [
-        PickerElement<String>(id: 0, element: "Option 1"),
-        PickerElement<String>(id: 1, element: "Option 2"),
-        PickerElement<String>(id: 2, element: "Option 3"),
+    static let elements: [PickerElement<Int, String>] = [
+        PickerElement<Int, String>(id: 0, element: "Option 1"),
+        PickerElement<Int, String>(id: 1, element: "Option 2"),
+        PickerElement<Int, String>(id: 2, element: "Option 3"),
     ]
 
     static var previews: some View {

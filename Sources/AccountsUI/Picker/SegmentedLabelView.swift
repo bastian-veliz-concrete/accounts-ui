@@ -13,10 +13,14 @@ import SwiftUI
 @available(watchOS,
            unavailable,
            message: "SegmentedLabelView is not available in watchOS")
-public struct SegmentedLabelView: View {
+public struct SegmentedLabelView<IdType: Hashable>: View {
     let title: String
-    let elements: [PickerElement<String>]
-    @Binding private var selection: Int
+    let elements: [PickerElement<IdType, String>]
+    @Binding private var selection: IdType
+
+    private var selectedElementName: String {
+        return self.elements.first(where: { $0.id == self.selection })?.element ?? ""
+    }
 
     /// Default initializer
     /// - Parameters:
@@ -24,8 +28,8 @@ public struct SegmentedLabelView: View {
     ///   - elements: elements to be shown in the picker
     ///   - selection: Binding to picker selected index
     public init(title: String,
-                elements: [PickerElement<String>],
-                selection: Binding<Int>) {
+                elements: [PickerElement<IdType, String>],
+                selection: Binding<IdType>) {
         self.title = title
         self.elements = elements
         self._selection = selection
@@ -52,10 +56,10 @@ public struct SegmentedLabelView: View {
 struct SegmentedLabelView_Previews: PreviewProvider {
     @ObservedObject static var viewModel = TestViewModel()
 
-    static let elements: [PickerElement<String>] = [
-        PickerElement<String>(id: 0, element: "Option 1"),
-        PickerElement<String>(id: 1, element: "Option 2"),
-        PickerElement<String>(id: 2, element: "Option 3"),
+    static let elements: [PickerElement<Int, String>] = [
+        PickerElement<Int, String>(id: 0, element: "Option 1"),
+        PickerElement<Int, String>(id: 1, element: "Option 2"),
+        PickerElement<Int, String>(id: 2, element: "Option 3"),
     ]
     static var previews: some View {
         Group {
