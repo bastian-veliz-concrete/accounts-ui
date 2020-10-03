@@ -3,8 +3,11 @@
 //
 //  Generated on Zeplin. (16/9/2020).
 
-#if os(watchOS) || os(tvOS)
+#if canImport(UIKit)
     import UIKit
+#endif
+
+#if os(watchOS) || os(tvOS)
 
     extension UIColor {
         // MARK: - Colors
@@ -64,7 +67,7 @@
 
 #endif
 
-#if os(tvOS)
+#if os(tvOS) || os(iOS)
     extension UIColor {
         @nonobjc class func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
             return UIColor { (traits) -> UIColor in
