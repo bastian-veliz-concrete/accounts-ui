@@ -11,8 +11,6 @@ public extension ContentSizeCategory {
     /**
      Check if an Accessibility category is used
 
-     Check if an Accessibility category is used
-
      - Note:
         - Returns `false` is ContentSizeCategory value is` .extraSmall`, `.small`, `.medium`, `.large`, `.extraLarge`, `.extraExtraLarge`, `.extraExtraExtraLarge`
         - Return `true` in another case
@@ -27,8 +25,6 @@ public extension ContentSizeCategory {
     }
 
     /**
-     Check if an extra large Accessibility category is used
-
      Check if an extra large Accessibility category is used
 
      - Note:
