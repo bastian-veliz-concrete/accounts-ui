@@ -15,3 +15,7 @@ This package contains a set of UI components. They are:
 #### Other
 - `DateSelector`: A `DatePicker` decorator view (not available for `watchOS` and `tvOS`)
 - `LabelSwitchView`: View composed by a `Text` and a `Toggle`
+- `GenericErrorView`: View used to show error messages
+
+## Documentation
+You can check documentation [here](https://bastianx6.github.io/accounts-ui/)

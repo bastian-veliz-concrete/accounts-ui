@@ -36,13 +36,70 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppAppearance.html">AppAppearance</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ContentSizeCategory.html">ContentSizeCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Appearance.html">Appearance</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/CategoryStoreModel.html">CategoryStoreModel</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/CurrencyTextField.html">CurrencyTextField</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/DateSelector.html">DateSelector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ExpeditureDetailCardModel.html">ExpeditureDetailCardModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ExpeditureDetailCardModel/Payments.html">– Payments</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ExpeditureDetailCardView.html">ExpeditureDetailCardView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ExpeditureSimpleCardModel.html">ExpeditureSimpleCardModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ExpeditureSimpleCardView.html">ExpeditureSimpleCardView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/GenericErrorView.html">GenericErrorView</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/LabelPickerView.html">LabelPickerView</a>
@@ -54,7 +111,13 @@
                 <a href="Structs/LabelTextField.html">LabelTextField</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/ListHeaderView.html">ListHeaderView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/MonthPickerView.html">MonthPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MovementResources.html">MovementResources</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/PickerElement.html">PickerElement</a>
@@ -79,6 +142,209 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10AccountsUI25ExpeditureDetailCardModelV"></a>
+                    <a name="//apple_ref/swift/Struct/ExpeditureDetailCardModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI25ExpeditureDetailCardModelV">ExpeditureDetailCardModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Model used to populate a <code><a href="Structs/ExpeditureDetailCardView.html">ExpeditureDetailCardView</a></code></p>
+
+                        <a href="Structs/ExpeditureDetailCardModel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExpeditureDetailCardModel</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI24ExpeditureDetailCardViewV"></a>
+                    <a name="//apple_ref/swift/Struct/ExpeditureDetailCardView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI24ExpeditureDetailCardViewV">ExpeditureDetailCardView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Expediture detail card</p>
+
+<p>This view show an expediture in detail</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The view shows:</p>
+
+<ul>
+<li>Movement title</li>
+<li>Movement description</li>
+<li>Movement amount</li>
+<li>Multi-payment info if exists</li>
+</ul>
+
+</div><div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>This view is compatible with accessibility size categories</p>
+
+</div>
+
+                        <a href="Structs/ExpeditureDetailCardView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExpeditureDetailCardView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI25ExpeditureSimpleCardModelV"></a>
+                    <a name="//apple_ref/swift/Struct/ExpeditureSimpleCardModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI25ExpeditureSimpleCardModelV">ExpeditureSimpleCardModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Model used to populate a <code><a href="Structs/ExpeditureSimpleCardView.html">ExpeditureSimpleCardView</a></code></p>
+
+                        <a href="Structs/ExpeditureSimpleCardModel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExpeditureSimpleCardModel</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI24ExpeditureSimpleCardViewV"></a>
+                    <a name="//apple_ref/swift/Struct/ExpeditureSimpleCardView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI24ExpeditureSimpleCardViewV">ExpeditureSimpleCardView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Expediture simple card</p>
+
+<p>This view show an expediture category or store in a simple way</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The view shows:</p>
+
+<ul>
+<li>Movement title</li>
+<li>Movement amount</li>
+</ul>
+
+</div><div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>This view is compatible with accessibility size categories</p>
+
+</div>
+
+                        <a href="Structs/ExpeditureSimpleCardView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExpeditureSimpleCardView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI18CategoryStoreModelV"></a>
+                    <a name="//apple_ref/swift/Struct/CategoryStoreModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI18CategoryStoreModelV">CategoryStoreModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Struct used to list categories and stores</p>
+
+                        <a href="Structs/CategoryStoreModel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CategoryStoreModel</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CategoryStoreModel</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI17MovementResourcesV"></a>
+                    <a name="//apple_ref/swift/Struct/MovementResources" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI17MovementResourcesV">MovementResources</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stores category and stores</p>
+
+                        <a href="Structs/MovementResources.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MovementResources</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10AccountsUI12DateSelectorV"></a>
                     <a name="//apple_ref/swift/Struct/DateSelector" class="dashAnchor"></a>
                     <a class="token" href="#/s:10AccountsUI12DateSelectorV">DateSelector</a>
@@ -100,6 +366,34 @@
                           <pre class="highlight swift"><code><span class="kd">@available(watchOS, unavailable, message: "DateSelector is not available in watchOS")</span>
 <span class="kd">@available(tvOS, unavailable, message: "DateSelector is not available in tvOS")</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DateSelector</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI16GenericErrorViewV"></a>
+                    <a name="//apple_ref/swift/Struct/GenericErrorView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI16GenericErrorViewV">GenericErrorView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error view</p>
+
+                        <a href="Structs/GenericErrorView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GenericErrorView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
 
                         </div>
                       </div>
@@ -137,6 +431,39 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10AccountsUI14ListHeaderViewV"></a>
+                    <a name="//apple_ref/swift/Struct/ListHeaderView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI14ListHeaderViewV">ListHeaderView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Header used in expenses list</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This view could be replaced by the native <code>Label</code> element
+
+</div>
+
+                        <a href="Structs/ListHeaderView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListHeaderView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10AccountsUI15LabelPickerViewV"></a>
                     <a name="//apple_ref/swift/Struct/LabelPickerView" class="dashAnchor"></a>
                     <a class="token" href="#/s:10AccountsUI15LabelPickerViewV">LabelPickerView</a>
@@ -155,7 +482,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LabelPickerView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LabelPickerView</span><span class="o">&lt;</span><span class="kt">IdType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">View</span> <span class="k">where</span> <span class="kt">IdType</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -211,7 +538,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PickerElement</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PickerElement</span><span class="o">&lt;</span><span class="kt">IdType</span><span class="p">,</span> <span class="kt">ElementType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Identifiable</span> <span class="k">where</span> <span class="kt">IdType</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -240,7 +567,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available(watchOS, unavailable, message: "SegmentedLabelView is not available in watchOS")</span>
-<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SegmentedLabelView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SegmentedLabelView</span><span class="o">&lt;</span><span class="kt">IdType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">View</span> <span class="k">where</span> <span class="kt">IdType</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -308,7 +635,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-09-13)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

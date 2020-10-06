@@ -19,12 +19,6 @@ public extension Color {
      Background color
 
      Get the background color for each OS
-
-     - Important:
-        This variable returns:
-        - `Color(UIColor.systemBackground)` in iOS
-        - `return Color("background")` in another case
-
      */
     static let backgroundColor: Color = {
         #if os(iOS)
@@ -36,6 +30,23 @@ public extension Color {
             return Color(UIColor.black)
         #else
             let color = NSColor.dynamicColor(light: .white, dark: .black)
+            return Color(color)
+        #endif
+    }()
+
+    /**
+     Foreground color
+
+     Get the foreground color for each OS
+     */
+    static let foregroundColor: Color = {
+        #if os(tvOS) || os(iOS)
+            let color = UIColor.dynamicColor(light: .black, dark: .white)
+            return Color(color)
+        #elseif os(watchOS)
+            return Color(UIColor.white)
+        #else
+            let color = NSColor.dynamicColor(light: .black, dark: .white)
             return Color(color)
         #endif
     }()

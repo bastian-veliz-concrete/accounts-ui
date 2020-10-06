@@ -15,10 +15,10 @@ public struct MonthPickerView: View {
     let locale: Locale
     @Binding private var selection: Int
 
-    var elements: [PickerElement<String>] {
-        var array = [PickerElement<String>]()
+    var elements: [PickerElement<Int, String>] {
+        var array = [PickerElement<Int, String>]()
         for i in 0 ..< self.months.count {
-            array.append(PickerElement<String>(id: i, element: self.months[i]))
+            array.append(PickerElement<Int, String>(id: i + 1, element: self.months[i]))
         }
 
         return array
@@ -72,7 +72,6 @@ struct MonthPickerView_Previews: PreviewProvider {
             MonthPickerView(title: "Meses", selection: self.$viewModel.selection)
             MonthPickerView(title: "Meses", selection: self.$viewModel.selection, locale: Locale(identifier: "en_US"))
         }
-        
     }
 
     class TestViewModel: ObservableObject, Identifiable {
