@@ -115,10 +115,10 @@ public struct ExpeditureSimpleCardView: View {
 
 struct ExpeditureSimpleCardView_Previews: PreviewProvider {
     static var elements: [ExpeditureSimpleCardModel] = [
-        ExpeditureSimpleCardModel(name: "Alimentos", amount: "$ 9.999.999", systemImageName: "cart.fill", imageTintColor: .green),
-        ExpeditureSimpleCardModel(name: "Servicios básicos blah blah blah blah blah blah blah blah blah blah", amount: "$ 999", systemImageName: "bolt.fill", imageTintColor: .yellow),
-        ExpeditureSimpleCardModel(name: "Servicios online", amount: "$ 9.999.999", systemImageName: "tv.fill", imageTintColor: .blue),
-        ExpeditureSimpleCardModel(name: "Otras compras", amount: "$ 9", systemImageName: "creditcard.fill", imageTintColor: .red),
+        ExpeditureSimpleCardModel(id: UUID(), name: "Alimentos", amount: "$ 9.999.999", systemImageName: "cart.fill", imageTintColor: .green),
+        ExpeditureSimpleCardModel(id: UUID(), name: "Servicios básicos blah blah blah blah blah blah blah blah blah blah", amount: "$ 999", systemImageName: "bolt.fill", imageTintColor: .yellow),
+        ExpeditureSimpleCardModel(id: UUID(), name: "Servicios online", amount: "$ 9.999.999", systemImageName: "tv.fill", imageTintColor: .blue),
+        ExpeditureSimpleCardModel(id: UUID(), name: "Otras compras", amount: "$ 9", systemImageName: "creditcard.fill", imageTintColor: .red),
     ]
 
     static var previews: some View {

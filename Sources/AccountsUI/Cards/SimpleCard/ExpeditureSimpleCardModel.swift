@@ -10,7 +10,7 @@ import SwiftUI
 /// Model used to populate a `ExpeditureSimpleCardView`
 public struct ExpeditureSimpleCardModel: Identifiable {
     /// Expediture id
-    public let id: UUID = UUID()
+    public let id: UUID
 
     /// System image name (using SF Icons)
     public let systemImageName: String
@@ -26,15 +26,17 @@ public struct ExpeditureSimpleCardModel: Identifiable {
 
     /// Default initializer
     /// - Parameters:
+    ///   - id: expediture id
     ///   - name: expediture name
     ///   - amount: expediture amount
     ///   - systemImageName: system image name (using SF symbols)
     ///   - imageTintColor: image tint color
-    public init(name: String,
+    public init(id: UUID,
+                name: String,
                 amount: String,
                 systemImageName: String,
-                imageTintColor: Color)
-    {
+                imageTintColor: Color) {
+        self.id = id
         self.name = name
         self.amount = amount
         self.systemImageName = systemImageName
