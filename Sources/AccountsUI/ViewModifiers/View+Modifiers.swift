@@ -24,4 +24,10 @@ public extension View {
     func fullBackgroundColor(_ color: Color) -> some View {
         self.modifier(FullBackgroundModifier(color: color))
     }
+
+    /// Wraps the content in a NavigationView in iOS. In other OS it returns the same view
+    /// - Returns: A view wrapped in a Navigation view, or the same view
+    func wrapInNavigationViewIfNeeded() -> some View {
+        self.modifier(WrapInNavigationViewModifier())
+    }
 }
