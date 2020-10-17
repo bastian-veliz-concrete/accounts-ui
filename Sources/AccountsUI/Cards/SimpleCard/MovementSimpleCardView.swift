@@ -1,5 +1,5 @@
 //
-//  ExpeditureSimpleCardView.swift
+//  MovementSimpleCardView.swift
 //
 //
 //  Created by Bastián Véliz Vega on 15-09-20.
@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 /**
- Expediture simple card
+ Movement simple card
 
- This view show an expediture category or store in a simple way
+ This view show an movement category or store in a simple way
 
  - Note:
  The view shows:
@@ -21,13 +21,13 @@ import SwiftUI
  - Important:
  This view is compatible with accessibility size categories
  */
-public struct ExpeditureSimpleCardView: View {
-    let model: ExpeditureSimpleCardModel
+public struct MovementSimpleCardView: View {
+    let model: MovementSimpleCardModel
     @Environment(\.sizeCategory) var sizeCategory
 
     /// Default initializer
-    /// - Parameter model: model with expediture information
-    public init(model: ExpeditureSimpleCardModel) {
+    /// - Parameter model: model with movement information
+    public init(model: MovementSimpleCardModel) {
         self.model = model
     }
 
@@ -113,39 +113,39 @@ public struct ExpeditureSimpleCardView: View {
     }
 }
 
-struct ExpeditureSimpleCardView_Previews: PreviewProvider {
-    static var elements: [ExpeditureSimpleCardModel] = [
-        ExpeditureSimpleCardModel(id: UUID(), name: "Alimentos", amount: "$ 9.999.999", systemImageName: "cart.fill", imageTintColor: .green),
-        ExpeditureSimpleCardModel(id: UUID(), name: "Servicios básicos blah blah blah blah blah blah blah blah blah blah", amount: "$ 999", systemImageName: "bolt.fill", imageTintColor: .yellow),
-        ExpeditureSimpleCardModel(id: UUID(), name: "Servicios online", amount: "$ 9.999.999", systemImageName: "tv.fill", imageTintColor: .blue),
-        ExpeditureSimpleCardModel(id: UUID(), name: "Otras compras", amount: "$ 9", systemImageName: "creditcard.fill", imageTintColor: .red),
+struct MovementSimpleCardView_Previews: PreviewProvider {
+    static var elements: [MovementSimpleCardModel] = [
+        MovementSimpleCardModel(id: UUID(), name: "Alimentos", amount: "$ 9.999.999", systemImageName: "cart.fill", imageTintColor: .green),
+        MovementSimpleCardModel(id: UUID(), name: "Servicios básicos blah blah blah blah blah blah blah blah blah blah", amount: "$ 999", systemImageName: "bolt.fill", imageTintColor: .yellow),
+        MovementSimpleCardModel(id: UUID(), name: "Servicios online", amount: "$ 9.999.999", systemImageName: "tv.fill", imageTintColor: .blue),
+        MovementSimpleCardModel(id: UUID(), name: "Otras compras", amount: "$ 9", systemImageName: "creditcard.fill", imageTintColor: .red),
     ]
 
     static var previews: some View {
         Group {
             ScrollView {
                 ForEach(self.elements, id: \.id) { element in
-                    ExpeditureSimpleCardView(model: element)
+                    MovementSimpleCardView(model: element)
                 }
             }
 
             ScrollView {
                 ForEach(self.elements, id: \.id) { element in
-                    ExpeditureSimpleCardView(model: element)
+                    MovementSimpleCardView(model: element)
                 }
             }
             .environment(\.colorScheme, .dark)
 
             ScrollView {
                 ForEach(self.elements, id: \.id) { element in
-                    ExpeditureSimpleCardView(model: element)
+                    MovementSimpleCardView(model: element)
                 }
             }
             .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
 
             ScrollView {
                 ForEach(self.elements, id: \.id) { element in
-                    ExpeditureSimpleCardView(model: element)
+                    MovementSimpleCardView(model: element)
                 }
             }
             .environment(\.sizeCategory, .accessibilityLarge)
