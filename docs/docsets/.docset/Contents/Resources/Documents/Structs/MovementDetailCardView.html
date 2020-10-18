@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LabelTextField Structure Reference</title>
+    <title>MovementDetailCardView Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/LabelTextField" class="dashAnchor"></a>
-    <a title="LabelTextField Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/MovementDetailCardView" class="dashAnchor"></a>
+    <a title="MovementDetailCardView Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        LabelTextField Structure Reference
+        MovementDetailCardView Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -132,15 +132,33 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>LabelTextField</h1>
+            <h1>MovementDetailCardView</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LabelTextField</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MovementDetailCardView</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
 
                 </div>
               </div>
-            <p>View composed by a Text and a TextField in a VStack</p>
+            <p>Movement detail card</p>
+
+<p>This view show an movement in detail</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The view shows:</p>
+
+<ul>
+<li>Movement title</li>
+<li>Movement description</li>
+<li>Movement amount</li>
+<li>Multi-payment info if exists</li>
+</ul>
+
+</div><div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>This view is compatible with accessibility size categories</p>
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -149,9 +167,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AccountsUI14LabelTextFieldV5title11placeholder5valueACSS_SS05SwiftB07BindingVySSGtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(title:placeholder:value:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AccountsUI14LabelTextFieldV5title11placeholder5valueACSS_SS05SwiftB07BindingVySSGtcfc">init(title:<wbr>placeholder:<wbr>value:<wbr>)</a>
+                    <a name="/s:10AccountsUI22MovementDetailCardViewV5modelAcA0cdE5ModelV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(model:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI22MovementDetailCardViewV5modelAcA0cdE5ModelV_tcfc">init(model:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -166,9 +184,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-            <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-            <span class="nv">value</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Structs/MovementDetailCardModel.html">MovementDetailCardModel</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -179,36 +195,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>title</em>
+                                <em>model</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>view title</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>placeholder</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>textfield&rsquo;s placeholder</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>value</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>binding to textfield&rsquo;s value</p>
+                                  <p>model with movement information</p>
                                 </div>
                               </td>
                             </tr>
@@ -221,9 +213,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AccountsUI14LabelTextFieldV4bodyQrvp"></a>
+                    <a name="/s:10AccountsUI22MovementDetailCardViewV4bodyQrvp"></a>
                     <a name="//apple_ref/swift/Property/body" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AccountsUI14LabelTextFieldV4bodyQrvp">body</a>
+                    <a class="token" href="#/s:10AccountsUI22MovementDetailCardViewV4bodyQrvp">body</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -231,7 +223,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>View body</p>
+                        <p>View&rsquo;s body</p>
 
                       </div>
                       <div class="declaration">

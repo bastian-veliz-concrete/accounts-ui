@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PickerElement Structure Reference</title>
+    <title>MovementSimpleCardModel Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/PickerElement" class="dashAnchor"></a>
-    <a title="PickerElement Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/MovementSimpleCardModel" class="dashAnchor"></a>
+    <a title="MovementSimpleCardModel Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        PickerElement Structure Reference
+        MovementSimpleCardModel Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -132,15 +132,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>PickerElement</h1>
+            <h1>MovementSimpleCardModel</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PickerElement</span><span class="o">&lt;</span><span class="kt">IdType</span><span class="p">,</span> <span class="kt">ElementType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Identifiable</span> <span class="k">where</span> <span class="kt">IdType</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MovementSimpleCardModel</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
 
                 </div>
               </div>
-            <p>Picker element</p>
+            <p>Model used to populate a <code><a href="../Structs/MovementSimpleCardView.html">MovementSimpleCardView</a></code></p>
 
           </section>
           <section class="section task-group-section">
@@ -149,9 +149,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AccountsUI13PickerElementV2idxvp"></a>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV2id10Foundation4UUIDVvp"></a>
                     <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AccountsUI13PickerElementV2idxvp">id</a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV2id10Foundation4UUIDVvp">id</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -159,14 +159,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Picker id. Is also use as index in a array of elements</p>
+                        <p>Movement id</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">IdType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span></code></pre>
 
                         </div>
                       </div>
@@ -176,9 +176,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AccountsUI13PickerElementV7elementq_vp"></a>
-                    <a name="//apple_ref/swift/Property/element" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AccountsUI13PickerElementV7elementq_vp">element</a>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV15systemImageNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/systemImageName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV15systemImageNameSSvp">systemImageName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,14 +186,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Element used as picker source</p>
+                        <p>System image name (using SF Icons)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">ElementType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">systemImageName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -203,9 +203,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AccountsUI13PickerElementV2id7elementACyxq_Gx_q_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(id:element:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AccountsUI13PickerElementV2id7elementACyxq_Gx_q_tcfc">init(id:<wbr>element:<wbr>)</a>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV14imageTintColor05SwiftB00I0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/imageTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV14imageTintColor05SwiftB00I0Vvp">imageTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tint color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">imageTintColor</span><span class="p">:</span> <span class="kt">Color</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Movement name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV6amountSSvp"></a>
+                    <a name="//apple_ref/swift/Property/amount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV6amountSSvp">amount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Movement amount</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AccountsUI23MovementSimpleCardModelV2id4name6amount15systemImageName14imageTintColorAC10Foundation4UUIDV_S3S05SwiftB00O0Vtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(id:name:amount:systemImageName:imageTintColor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AccountsUI23MovementSimpleCardModelV2id4name6amount15systemImageName14imageTintColorAC10Foundation4UUIDV_S3S05SwiftB00O0Vtcfc">init(id:<wbr>name:<wbr>amount:<wbr>systemImageName:<wbr>imageTintColor:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,7 +301,11 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">IdType</span><span class="p">,</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">ElementType</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span>
+            <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">amount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">systemImageName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">imageTintColor</span><span class="p">:</span> <span class="kt">Color</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -236,19 +321,55 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>element identifier</p>
+                                  <p>movement id</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>element</em>
+                                <em>name</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>element used as picker source</p>
+                                  <p>movement name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>movement amount</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>systemImageName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>system image name (using SF symbols)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageTintColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>image tint color</p>
                                 </div>
                               </td>
                             </tr>
