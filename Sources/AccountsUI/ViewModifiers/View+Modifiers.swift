@@ -17,4 +17,17 @@ public extension View {
                             titleColor: Color = Color.foregroundColor) -> some View {
         self.modifier(NavigationBarModifier(backgroundColor: backgroundColor, titleColor: titleColor))
     }
+
+    /// Add a background color view ignoring all safe area edges
+    /// - Parameter color: background color
+    /// - Returns: A ZStack with the view and the background color ignoring safe area edges
+    func fullBackgroundColor(_ color: Color) -> some View {
+        self.modifier(FullBackgroundModifier(color: color))
+    }
+
+    /// Wraps the content in a NavigationView in iOS. In other OS it returns the same view
+    /// - Returns: A view wrapped in a Navigation view, or the same view
+    func wrapInNavigationViewIfNeeded() -> some View {
+        self.modifier(WrapInNavigationViewModifier())
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  ExpeditureSimpleCardModel.swift
+//  MovementSimpleCardModel.swift
 //
 //
 //  Created by Bastián Véliz Vega on 15-09-20.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-/// Model used to populate a `ExpeditureSimpleCardView`
-public struct ExpeditureSimpleCardModel: Identifiable {
-    /// Expediture id
+/// Model used to populate a `MovementSimpleCardView`
+public struct MovementSimpleCardModel: Identifiable {
+    /// Movement id
     public let id: UUID
 
     /// System image name (using SF Icons)
@@ -18,17 +18,17 @@ public struct ExpeditureSimpleCardModel: Identifiable {
     /// Tint color
     public let imageTintColor: Color
 
-    /// Expediture name
+    /// Movement name
     public let name: String
 
-    /// Expediture amount
+    /// Movement amount
     public let amount: String
 
     /// Default initializer
     /// - Parameters:
-    ///   - id: expediture id
-    ///   - name: expediture name
-    ///   - amount: expediture amount
+    ///   - id: movement id
+    ///   - name: movement name
+    ///   - amount: movement amount
     ///   - systemImageName: system image name (using SF symbols)
     ///   - imageTintColor: image tint color
     public init(id: UUID,

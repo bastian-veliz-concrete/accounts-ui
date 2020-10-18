@@ -1,5 +1,5 @@
 //
-//  ExpeditureDetailCardModel.swift
+//  MovementDetailCardModel.swift
 //
 //
 //  Created by Bastián Véliz Vega on 14-09-20.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-/// Model used to populate a `ExpeditureDetailCardView`
-public struct ExpeditureDetailCardModel: Identifiable {
-    /// Expediture id
-    public let id: UUID = UUID()
+/// Model used to populate a `MovementDetailCardView`
+public struct MovementDetailCardModel: Identifiable {
+    /// Movement id
+    public let id: UUID
 
     /// System image name (using SF Icons)
     public let systemImageName: String
@@ -18,13 +18,13 @@ public struct ExpeditureDetailCardModel: Identifiable {
     /// Tint color
     public let imageTintColor: Color
 
-    /// Expediture title
+    /// Movement title
     public let title: String
 
-    /// Expediture description
+    /// Movement description
     public let description: String
 
-    /// Expediture amount
+    /// Movement amount
     public let amount: String
 
     /// Multi-payment info
@@ -32,19 +32,22 @@ public struct ExpeditureDetailCardModel: Identifiable {
 
     /// Default initializer
     /// - Parameters:
+    ///   - id: movement id
     ///   - systemImageName: system image name (using SF symbols)
     ///   - imageTintColor: image tint color
-    ///   - title: expediture title
-    ///   - description: expediture description
-    ///   - amount: expediture amount
+    ///   - title: movement title
+    ///   - description: movement description
+    ///   - amount: movement amount
     ///   - paymentInfo: multi-payment info
-    public init(systemImageName: String,
+    public init(id: UUID,
+                systemImageName: String,
                 imageTintColor: Color,
                 title: String,
                 description: String,
                 amount: String,
                 paymentInfo: Payments? = nil)
     {
+        self.id = id
         self.systemImageName = systemImageName
         self.imageTintColor = imageTintColor
         self.title = title
@@ -53,7 +56,7 @@ public struct ExpeditureDetailCardModel: Identifiable {
         self.paymentInfo = paymentInfo
     }
 
-    /// Model used to reflect a multi-payment expediture
+    /// Model used to reflect a multi-payment movement
     public struct Payments {
         /// Current payment
         public let current: Int

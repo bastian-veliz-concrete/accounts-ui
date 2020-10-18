@@ -39,10 +39,10 @@ public struct MonthPickerView: View {
     /// - Parameters:
     ///   - title: View title
     ///   - selection: Binding to picker selected index
-    ///   - locale: Locale used to get month symbols from date formater. Default Value: es_CL
+    ///   - locale: Locale used to get month symbols from date formater. Default Value: Locale.current
     public init(title: String,
                 selection: Binding<Int>,
-                locale: Locale = Locale(identifier: "es_CL")) {
+                locale: Locale = Locale.current) {
         self.title = title
         self.locale = locale
         self._selection = selection

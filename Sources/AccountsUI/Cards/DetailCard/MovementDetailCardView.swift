@@ -1,5 +1,5 @@
 //
-//  ExpeditureDetailCardView.swift
+//  MovementDetailCardView.swift
 //
 //
 //  Created by Bastián Véliz Vega on 14-09-20.
@@ -8,9 +8,9 @@
 import SwiftUI
 
 /**
- Expediture detail card
+ Movement detail card
 
- This view show an expediture in detail
+ This view show an movement in detail
 
  - Note:
  The view shows:
@@ -22,14 +22,14 @@ import SwiftUI
  - Important:
  This view is compatible with accessibility size categories
  */
-public struct ExpeditureDetailCardView: View {
+public struct MovementDetailCardView: View {
     @Environment(\.sizeCategory) var sizeCategory
 
-    let model: ExpeditureDetailCardModel
+    let model: MovementDetailCardModel
 
     /// Default initializer
-    /// - Parameter model: model with expediture information
-    public init(model: ExpeditureDetailCardModel) {
+    /// - Parameter model: model with movement information
+    public init(model: MovementDetailCardModel) {
         self.model = model
     }
 
@@ -164,9 +164,10 @@ public struct ExpeditureDetailCardView: View {
     }
 }
 
-struct ExpeditureDetailCardView_Previews: PreviewProvider {
-    static let model: ExpeditureDetailCardModel = {
-        let model = ExpeditureDetailCardModel(systemImageName: "creditcard.fill",
+struct MovementDetailCardView_Previews: PreviewProvider {
+    static let model: MovementDetailCardModel = {
+        let model = MovementDetailCardModel(id: UUID(),
+                                              systemImageName: "creditcard.fill",
                                               imageTintColor: .indigo,
                                               title: "Esto es un texto de dos líneas blah blah blah blah",
                                               description: "Esta es una breve descripción del movimiento",
@@ -174,9 +175,10 @@ struct ExpeditureDetailCardView_Previews: PreviewProvider {
         return model
     }()
 
-    static let modelWithPayments: ExpeditureDetailCardModel = {
-        let payment = ExpeditureDetailCardModel.Payments(current: 99, total: 99, title: "Cuota")
-        let model = ExpeditureDetailCardModel(systemImageName: "creditcard.fill",
+    static let modelWithPayments: MovementDetailCardModel = {
+        let payment = MovementDetailCardModel.Payments(current: 99, total: 99, title: "Cuota")
+        let model = MovementDetailCardModel(id: UUID(),
+                                              systemImageName: "creditcard.fill",
                                               imageTintColor: .indigo,
                                               title: "Esto es un texto de dos líneas",
                                               description: "Esta es una breve descripción del movimiento",
@@ -188,27 +190,27 @@ struct ExpeditureDetailCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ScrollView {
-                ExpeditureDetailCardView(model: self.modelWithPayments)
-                ExpeditureDetailCardView(model: self.model)
+                MovementDetailCardView(model: self.modelWithPayments)
+                MovementDetailCardView(model: self.model)
             }.background(Color.systemGray6)
                 .environment(\.colorScheme, .light)
 
             ScrollView {
-                ExpeditureDetailCardView(model: self.modelWithPayments)
-                ExpeditureDetailCardView(model: self.model)
+                MovementDetailCardView(model: self.modelWithPayments)
+                MovementDetailCardView(model: self.model)
             }
             .environment(\.colorScheme, .dark)
 
             ScrollView {
-                ExpeditureDetailCardView(model: self.modelWithPayments)
-                ExpeditureDetailCardView(model: self.model)
+                MovementDetailCardView(model: self.modelWithPayments)
+                MovementDetailCardView(model: self.model)
             }
             .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
             .environment(\.colorScheme, .light)
 
             ScrollView {
-                ExpeditureDetailCardView(model: self.modelWithPayments)
-                ExpeditureDetailCardView(model: self.model)
+                MovementDetailCardView(model: self.modelWithPayments)
+                MovementDetailCardView(model: self.model)
             }
             .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
             .environment(\.colorScheme, .dark)

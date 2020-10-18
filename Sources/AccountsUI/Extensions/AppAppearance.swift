@@ -17,7 +17,7 @@ public protocol Appearance {
 }
 
 /// Default aplication appearance
-public class AppAppearance: Appearance {
+public class AppAppearance: ObservableObject, Appearance {
     /// Shared appearance
     public static let shared = AppAppearance()
 
