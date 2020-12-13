@@ -13,6 +13,7 @@ import SwiftUI
 public struct MonthPickerView: View {
     let title: String
     let locale: Locale
+    let showTitle: Bool
     @Binding private var selection: Int
 
     var elements: [PickerElement<Int, String>] {
@@ -25,7 +26,7 @@ public struct MonthPickerView: View {
     }
 
     var months: [String] {
-        let dateFormatter: DateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.locale = self.locale
 
         guard let months = dateFormatter.monthSymbols else {
@@ -40,12 +41,16 @@ public struct MonthPickerView: View {
     ///   - title: View title
     ///   - selection: Binding to picker selected index
     ///   - locale: Locale used to get month symbols from date formater. Default Value: Locale.current
+    ///   - showTitle: Show title label
     public init(title: String,
                 selection: Binding<Int>,
-                locale: Locale = Locale.current) {
+                locale: Locale = Locale.current,
+                showTitle: Bool = true)
+    {
         self.title = title
         self.locale = locale
         self._selection = selection
+        self.showTitle = showTitle
     }
 
     /**
@@ -60,7 +65,8 @@ public struct MonthPickerView: View {
     public var body: some View {
         LabelPickerView(title: self.title,
                         elements: self.elements,
-                        selection: self.$selection)
+                        selection: self.$selection,
+                        showTitle: self.showTitle)
     }
 }
 
