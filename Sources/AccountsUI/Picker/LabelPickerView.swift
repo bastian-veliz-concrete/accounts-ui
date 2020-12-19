@@ -16,6 +16,7 @@ public struct LabelPickerView<IdType: Hashable>: View {
 
     let title: String
     let elements: [PickerElement<IdType, String>]
+    let showTitle: Bool
 
     private var selectedElementName: String {
         return self.elements.first(where: { $0.id == self.selection })?.element ?? ""
@@ -26,12 +27,16 @@ public struct LabelPickerView<IdType: Hashable>: View {
     ///   - title: View title
     ///   - elements: elements to be used in the Picker
     ///   - selection: Binding to picker selected index
+    ///   - showTitle: Show title label
     public init(title: String,
                 elements: [PickerElement<IdType, String>],
-                selection: Binding<IdType>) {
+                selection: Binding<IdType>,
+                showTitle: Bool = true)
+    {
         self.title = title
         self.elements = elements
         self._selection = selection
+        self.showTitle = showTitle
         #if os(iOS)
             self._showPicker = State<Bool>(initialValue: false)
         #endif
@@ -55,12 +60,14 @@ public struct LabelPickerView<IdType: Hashable>: View {
      */
     public var body: some View {
         VStack {
-            HStack {
-                Text(self.title)
-                    .bold()
-                    .mobilePickerLabel(self.selectedElementName)
+            if self.showTitle {
+                HStack {
+                    Text(self.title)
+                        .bold()
+                        .mobilePickerLabel(self.selectedElementName)
+                }
+                .mobileTapGesture(self.$showPicker)
             }
-            .mobileTapGesture(self.$showPicker)
             if self.showPicker {
                 Picker("", selection: self.$selection) {
                     ForEach(self.elements, id: \.id) { result in
